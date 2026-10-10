@@ -14,7 +14,9 @@ import type { NextAuthOptions, Session } from "next-auth";
 import type { JWT } from "next-auth/jwt";
 import GoogleProvider from "next-auth/providers/google";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL ??
+  "https://pmos-backend-ss6g.onrender.com";
 
 /** Shape returned by POST /api/auth/google/ */
 interface BackendTokens {

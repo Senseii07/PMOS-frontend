@@ -8,7 +8,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { formatDate, formatTime } from "@/lib/utils";
 import type { MealLog } from "@/lib/api";
 import toast from "react-hot-toast";
-import type { Metadata } from "next";
 
 export default function MealsPage() {
   const { data: session } = useSession();

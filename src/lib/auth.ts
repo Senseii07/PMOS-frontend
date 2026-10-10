@@ -10,7 +10,7 @@
  *     server component / API route can call the Django backend authenticated.
  *  4. The JWT is refreshed automatically before expiry using the refresh token.
  */
-import type { NextAuthOptions, Session, User } from "next-auth";
+import type { NextAuthOptions, Session } from "next-auth";
 import type { JWT } from "next-auth/jwt";
 import GoogleProvider from "next-auth/providers/google";
 
@@ -85,7 +85,7 @@ export const authOptions: NextAuthOptions = {
             backendUser: backend.user,
             error: undefined,
           };
-        } catch (err) {
+        } catch {
           return { ...token, error: "BackendAuthError" };
         }
       }

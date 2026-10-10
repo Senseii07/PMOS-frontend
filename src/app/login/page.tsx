@@ -2,12 +2,10 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
-import { useRouter, useSearchParams } from "next/navigation";
-import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 
 export default function LoginPage() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") ?? "/dashboard";
   const error = searchParams.get("error");
